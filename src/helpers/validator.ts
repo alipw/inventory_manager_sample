@@ -70,7 +70,7 @@ async function kategoriValidator(nama: string) {
 }
 
 /**
- * @returns - Will do nothing if fine, will throw an BadRequestError if kategori is not found
+ * @returns - Will do nothing if fine, will throw an BadRequestError if barang is not found
  */
 async function idBarangValidator(id: string) {
   const barangRepo = Barang.getRepository();
