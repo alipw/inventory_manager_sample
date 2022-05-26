@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 import { Vendor } from "../../entity/Vendor";
 import { successWrapper } from "../../helpers/wrapper";
-import { addVendorPayloadType } from "./addVendor.validate";
+import { addVendorPayloadType } from "./addvendor.validate";
 
 async function handle(payload: addVendorPayloadType) {
   const vendor = new Vendor();

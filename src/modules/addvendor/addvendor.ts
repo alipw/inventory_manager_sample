@@ -1,5 +1,5 @@
-import { handle } from "./addVendor.handle";
-import { addVendorPayloadType, validate } from "./addVendor.validate";
+import { handle } from "./addvendor.handle";
+import { addVendorPayloadType, validate } from "./addvendor.validate";
 
 async function addVendor(req, res, next) {
   const payload: addVendorPayloadType = req.body;

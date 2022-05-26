@@ -1,5 +1,5 @@
-import { handle } from "./addBarang.handle";
-import { validate } from "./addBarang.validate";
+import { handle } from "./addbarang.handle";
+import { validate } from "./addbarang.validate";
 
 async function addBarang(req, res, next) {
   const payload = req.body;

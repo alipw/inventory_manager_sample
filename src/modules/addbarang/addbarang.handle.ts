@@ -4,7 +4,7 @@ import { Kategori } from "../../entity/Kategori";
 import { Vendor } from "../../entity/Vendor";
 import { kategoriValidator, vendorValidator } from "../../helpers/validator";
 import { successWrapper } from "../../helpers/wrapper";
-import { addBarangPayloadType } from "./addBarang.validate";
+import { addBarangPayloadType } from "./addbarang.validate";
 
 type processedPayloadType = {
   nama: string;
