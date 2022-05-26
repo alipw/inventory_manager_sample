@@ -29,7 +29,7 @@ async function validate(req: any, allowed_levels: level_types[]) {
     try {
       // will throw an error if token is not valid
       // and thus will not set authorized to 'true'
-      verify(token, secret_keys[level])
+      verify(token, secret_keys[level]);
       authorized = true;
     } catch (err) {}
   }

@@ -2,12 +2,11 @@ import { handle } from "./addbarang.handle";
 import { validate } from "./addbarang.validate";
 
 async function addBarang(req, res, next) {
-  const payload = req.body;
-  
-  try{
+  try {
+    const payload = req.body;
     await validate(payload);
     res.send(await handle(payload));
-  }catch(error){
+  } catch (error) {
     next(error);
   }
 }
