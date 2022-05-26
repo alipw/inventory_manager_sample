@@ -1,15 +1,16 @@
-import { handle } from "./getdetailbarang";
-import { validate } from "./getdetailbarang.validate";
+import { Barang } from "../../entity/Barang";
+import { successWrapper } from "../../helpers/wrapper";
+import { queryGetDetailBarangType } from "./getdetailbarang.validate";
 
-async function getDetailbarang(req, res, next) {
-  const query = req.query;
+async function handle(query: queryGetDetailBarangType) {
+  const barangRepo = Barang.getRepository();
+  const searchResult = await barangRepo.findOne({
+    where: {
+      id: query.id,
+    },
+  });
 
-  try {
-    await validate(query);
-    res.send(await handle(query));
-  } catch (error) {
-    next(error);
-  }
+  return successWrapper({ result: searchResult });
 }
 
-export { getDetailbarang };
+export { handle };

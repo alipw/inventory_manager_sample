@@ -13,7 +13,7 @@ import { addBarang } from "./modules/addbarang/addbarang";
 import { addKategori } from "./modules/addkategori/addkategori";
 import { addVendor } from "./modules/addvendor/addvendor";
 import { authHandler } from "./modules/authentication/authentication";
-import { getDetailbarang } from "./modules/getdetailbarang/getdetailbarang.handle";
+import { getDetailbarang } from "./modules/getdetailbarang/getdetailbarang";
 import { getlistbarang } from "./modules/getlistbarang/getlistbarang";
 import { login } from "./modules/login/login";
 import { register } from "./modules/register/register";
