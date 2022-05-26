@@ -16,4 +16,4 @@ async function validate(payload: updateStokBarangPayloadType) {
   await idBarangValidator(payload.id);
 }
 
-export { validate };
+export { validate, updateStokBarangPayloadType };

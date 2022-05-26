@@ -17,6 +17,7 @@ import { getDetailbarang } from "./modules/getdetailbarang/getdetailbarang";
 import { getlistbarang } from "./modules/getlistbarang/getlistbarang";
 import { login } from "./modules/login/login";
 import { register } from "./modules/register/register";
+import { updateStokBarang } from "./modules/updatestokbarang/updatestokbarang";
 import { initredis } from "./redis-connection";
 
 async function main() {
@@ -82,6 +83,8 @@ async function main() {
 
   // Barang
   server.get("/api/v1/barang", all_registered_user, getlistbarang);
+  server.put("/api/v1/barang", only_manager, updateStokBarang);
+
   server.get("/api/v1/barang/detail", all_registered_user, getDetailbarang);
 
   // Kategori
