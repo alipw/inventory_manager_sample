@@ -1,5 +1,4 @@
 import * as redis from "redis";
-import { InternalError } from "restify-errors";
 
 const RedisClient = redis.createClient({
   password: process.env.REDIS_PASSWORD,
